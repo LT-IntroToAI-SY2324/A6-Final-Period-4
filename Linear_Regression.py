@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
-data = pd.read_csv("Linear_regression/Coca_Cola_Dataset.csv")
+data = pd.read_csv("Linear_regression/Coca_Cola_Data.csv")
 print(data)
 x = data["Year"].values
 y = data["Annual Revenue (US dollars in billions)"].values
