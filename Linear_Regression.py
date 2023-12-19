@@ -3,10 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
-data = pd.read_csv("part1-linear-regression/blood_pressure_data.csv")
+data = pd.read_csv("Linear_regression/Coca_Cola_Dataset.csv")
 print(data)
 x = data["Year"].values
-y = data["Stock Price"].values
+y = data["Annual Revenue (US dollars in billions)"].values
 
 x = x.reshape(-1,1)
 
