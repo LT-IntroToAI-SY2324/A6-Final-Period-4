@@ -3,10 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
-data = pd.read_csv("Linear_regression/Coca_Cola_Data.csv")
+data = pd.read_csv("Coca_Cola_Data.csv")
 print(data)
-x = data["Year"].values
-y = data["Annual Revenue (US dollars in billions)"].values
+x = data["Time (Year)"].values
+y = data[" Annual Revenue (US dollars in Billions)"].values
 
 x = x.reshape(-1,1)
 
@@ -22,7 +22,7 @@ print(coef, intercept, r_squared)
 print(f"Model's Linear Equation: y = {coef}x + {intercept}")
 print(f"R Squared value: {r_squared}")
 
-x_predict = 43
+x_predict = 2023
 # plug that value into your model
 prediction = model.predict([[x_predict]])
 print(x_predict)

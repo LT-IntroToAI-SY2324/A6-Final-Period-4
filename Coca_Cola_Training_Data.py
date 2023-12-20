@@ -8,9 +8,9 @@ from sklearn.model_selection import train_test_split
 **********CREATE THE MODEL**********
 '''
 
-data = pd.read_csv("Coca_Cola_Training_Data/Coca_Cola_Data.csv")
+data = pd.read_csv("Coca_Cola_Data.csv")
 x = data["Time (Year)"].values
-y = data["Annual Revenue (US dollars in Billions)"].values
+y = data[" Annual Revenue (US dollars in Billions)"].values
 print(x,y)
 # Create your training and testing datasets:
 xtrain, xtest, ytrain, ytest = train_test_split(x, y ,test_size = .2)

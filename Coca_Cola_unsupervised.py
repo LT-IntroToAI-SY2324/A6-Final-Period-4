@@ -3,8 +3,11 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
-data = pd.read_csv("Coca_cola_unsupervised/Coca_Cola_Data.csv")
-data = data[["Time (Years)", "Annual Revenue (US dollars in billions)"]]
+data = pd.read_csv("Coca_Cola_Data.csv")
+print(data)
+x= data[" Annual Revenue (US dollars in Billions)"]
+print(x)
+data = data[["Time (Years)", "Annual Revenue (US dollars in Billions)"]]
 
 #standardize the data
 x_std = StandardScaler().fit_transform(data)
@@ -33,6 +36,6 @@ plt.scatter(centroids[:, 0], centroids[:, 1], marker='X', s=100,
             c='r', label='centroid')
             
 #shows the graph
-plt.xlabel("Time (Years")
-plt.ylabel("Annual Revenue (US dollars in billions)")
+plt.xlabel("Time (Years)")
+plt.ylabel("Annual Revenue (US dollars in Billions)")
 plt.show()
